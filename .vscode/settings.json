@@ -1,0 +1,34 @@
+{
+  // general
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // python
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.languageServer": "None",
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.interpreter": ["${workspaceFolder}/.venv/bin/python"],
+  "ty.importStrategy": "fromEnvironment",
+  "ty.interpreter": ["${workspaceFolder}/.venv/bin/python"],
+  "ty.diagnosticMode": "workspace",
+  "ty.disableLanguageServices": false,
+  "ty.inlayHints.variableTypes": true,
+  "ty.inlayHints.callArgumentNames": true,
+  "ty.completions.autoImport": true,
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".github/.copilot-commit-message-instructions.md"
+    }
+  ]
+}

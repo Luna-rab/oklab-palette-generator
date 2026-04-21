@@ -1,0 +1,57 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-in-docker
+{
+  "name": "python-devcontainer-template",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post_create.sh",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // python
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "astral-sh.ty",
+        //Docker
+        "ms-azuretools.vscode-docker",
+        //Git
+        "github.copilot", //GitHub Copilot
+        "github.copilot-chat", //GitHub Copilot Chat
+        "github.vscode-pull-request-github", //GitHub Pull Requests
+        "donjayamanne.githistory", //Git History
+        "mhutchie.git-graph", //Git Graph
+        //Test
+        "humao.rest-client", //REST Client
+        "ms-playwright.playwright", //Playwright
+        //Tools
+        "esbenp.prettier-vscode", //Prettier
+        "mechatroner.rainbow-csv", //Rainbow CSV
+        "streetsidesoftware.code-spell-checker", //Code Spell Checker
+        "anthropic.claude-code",
+        // markdown
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid"
+      ]
+    }
+  },
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "vscode"
+}
